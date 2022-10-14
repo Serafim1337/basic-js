@@ -16,7 +16,7 @@ function getSeason(date) {
   try {
     month = date.getMonth();
     if (!isFinite(month)) {
-      throw "Invalid date!";
+      throw new InvalidDateException("Invalid date!");
     }
   } catch (e) {
     console.error(e.message);
